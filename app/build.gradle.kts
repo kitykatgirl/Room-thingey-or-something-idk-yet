@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "ph.me.room_ba"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "ph.me.room_ba"
@@ -32,6 +32,9 @@ android {
 }
 
 dependencies {
+    val room_version = "3.0.3"
+    implementation("androidx.room3:room3-runtime:$room_version")
+    annotationProcessor("androidx.room3:room3-compiler:$room_version")
 
     implementation(libs.appcompat)
     implementation(libs.material)
