@@ -1,20 +1,20 @@
 package ph.me.room_ba;
 
-import androidx.room3.Dao;
-import androidx.room3.Delete;
-import androidx.room3.Insert;
-import androidx.room3.Query;
-import androidx.room3.Update;
+import androidx.room.Dao;
+import androidx.room.Delete;
+import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
 @Dao//Ming
 public interface GraDAO {
     @Insert
-    public void WstawGreDoBazy(Gra gra);
+    public void wstawGreDoBazy(Gra gra);
 
     @Insert
-    public void WstawGryDoBazy(Gra... gry);
+    public void wstawGryDoBazy(Gra... gry);
 
     @Delete
     public void usunZBazy(Gra gra);
@@ -25,6 +25,6 @@ public interface GraDAO {
     @Query("SELECT * FROM gry")
     public List<Gra> zwrocWszystkieGry();
 
-    @Query("SELECT nazwa FROM gry WHERE minLiczbaOsob = :ile")
+    @Query("SELECT tytul FROM gry WHERE minLiczbaOsob = :ile")
     public List<String> zwrocNazwyPoMinLiczbieOsob(int ile);
 }

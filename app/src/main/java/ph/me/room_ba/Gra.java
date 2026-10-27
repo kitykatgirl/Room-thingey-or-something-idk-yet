@@ -1,7 +1,7 @@
 package ph.me.room_ba;
 
-import androidx.room3.Entity;
-import androidx.room3.PrimaryKey;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "gry") // verity
 public class Gra {
@@ -17,5 +17,8 @@ public class Gra {
         this.minLiczbaOsob = minLiczbaOsob;
         this.maxLiczbaOsob = maxLiczbaOsob;
         this.kategoriaWiekowa = kategoriaWiekowa;
+    }
+
+    public Gra() {
     }
 }
