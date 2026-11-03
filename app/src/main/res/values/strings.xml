@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Room-ba</string>
+    <string-array name="kategorie">
+        <item>logiczne</item>
+        <item>strategiczne</item>
+        <item>imprezowe</item>
+        <item>karciane</item>
+        <item>planszowe</item>
+    </string-array>
 </resources>

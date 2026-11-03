@@ -21,4 +21,9 @@ public class Gra {
 
     public Gra() {
     }
+
+    @Override
+    public String toString() {
+        return "\n" + tytul + "\n" + kategoria + "\nMinimalna liczba graczy: " + minLiczbaOsob + "\nMaksymalna liczba graczy: " + maxLiczbaOsob + "\nKategoria Wiekowa: " + kategoriaWiekowa + "\n";
+    }
 }
