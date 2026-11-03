@@ -19,7 +19,7 @@
         android:id="@+id/editTextNazwa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15sp"
+        android:layout_margin="5sp"
         android:ems="10"
         android:inputType="text"
         android:hint="Nazwa gry" />
@@ -28,7 +28,7 @@
         android:id="@+id/editTextMinOsob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15sp"
+        android:layout_margin="5sp"
         android:ems="10"
         android:inputType="number"
         android:hint="Minimalna liczba osob" />
@@ -37,7 +37,7 @@
         android:id="@+id/editTextMaxOsob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15sp"
+        android:layout_margin="5sp"
         android:ems="10"
         android:inputType="number"
         android:hint="Maksymalna liczba osob" />
@@ -46,7 +46,7 @@
         android:id="@+id/editTextKatWiekowa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15sp"
+        android:layout_margin="5sp"
         android:ems="10"
         android:inputType="number"
         android:hint="Kategoria Wiekowa" />
@@ -55,15 +55,23 @@
         android:id="@+id/spinnerKategoria"
         android:layout_width="match_parent"
         android:entries="@array/kategorie"
-        android:layout_margin="15sp"
+        android:layout_margin="5sp"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15sp"
+        android:layout_margin="5sp"
         android:text="Dodaj" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:visibility="gone"
+        android:text="Aktualizuj" />
 
     <ListView
         android:id="@+id/listView"

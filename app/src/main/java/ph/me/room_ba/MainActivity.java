@@ -1,5 +1,7 @@
 package ph.me.room_ba;
 
+import static android.view.View.VISIBLE;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,12 +23,13 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnDodaj;
+    Button btnDodaj, btnAktualizuj;
     EditText editTextNazwa, editTextMin, editTextMax, editTextKatWiekowa;
     Spinner spinnerKategoria;
     ListView listView;
     List<Gra> gryList;
     ArrayAdapter<Gra> adapter;
+    Gra kliknietaGra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         btnDodaj = findViewById(R.id.button);
+        btnAktualizuj = findViewById(R.id.button2);
         editTextNazwa = findViewById(R.id.editTextNazwa);
         editTextMin = findViewById(R.id.editTextMinOsob);
         editTextMax = findViewById(R.id.editTextMaxOsob);
@@ -78,5 +82,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                kliknietaGra = gryList.get(i);
+                editTextNazwa.setText(kliknietaGra.tytul.toString());
+                editTextMin.setText(""+kliknietaGra.minLiczbaOsob);
+                editTextMax.setText(""+kliknietaGra.maxLiczbaOsob);
+                editTextKatWiekowa.setText(""+kliknietaGra.kategoriaWiekowa);
+                // TODO: spinner
+                btnAktualizuj.setVisibility(VISIBLE);
+            }
+        });
+        btnAktualizuj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }
